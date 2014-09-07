@@ -39,52 +39,11 @@
 
     </RelativeLayout>
 
-    <EditText
-        android:id="@+id/search_bar_view"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:background="@color/red"/>
-
-    <Button
-        style="?android:attr/buttonStyleSmall"
-        android:id="@+id/play_search_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Play New Song"
-        android:layout_alignTop="@id/search_bar_view"
-        android:layout_alignBottom="@id/search_bar_view"
-        android:layout_alignParentRight="true"
-        android:background="@color/green"/>
-
-    <Button
-        style="?android:attr/buttonStyleSmall"
-        android:id="@+id/search_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Search"
-        android:background="@color/pink"
-        android:layout_above="@+id/playlist_selection_spinner"
-        android:layout_toLeftOf="@+id/play_search_button"/>
-
-    <Spinner
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/playlist_selection_spinner"
-        android:layout_alignTop="@+id/album_art_view"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_toLeftOf="@+id/thumbs_up_down_layout"
-        android:background="@color/black" />
-
     <ImageView
         android:id="@+id/album_art_view"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:layout_below="@id/search_bar_view"
         android:layout_above="@id/audio_control_layout"
         android:background="@color/green"
         android:contentDescription="@string/album_art_image_view" />
@@ -97,7 +56,6 @@
 
         android:layout_alignParentRight="true"
 
-        android:layout_below="@id/search_bar_view"
         android:layout_toRightOf="@id/album_art_view"
         android:layout_above="@id/audio_control_layout"
 

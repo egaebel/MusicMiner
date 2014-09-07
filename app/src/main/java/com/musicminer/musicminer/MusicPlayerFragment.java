@@ -17,12 +17,7 @@ import java.util.Currency;
 import java.util.List;
 
 /**
- * A simple {@link Fragment} subclass.
- * Activities that contain this fragment must implement the
- * {@link com.musicminer.musicminer.MusicPlayerFragment.AudioControlInterface} interface
- * to handle interaction events.
- * Use the {@link MusicPlayerFragment#newInstance} factory method to
- * create an instance of this fragment.
+ * Fragment used for user interaction with the music player.
  *
  */
 public class MusicPlayerFragment extends Fragment implements View.OnClickListener {
@@ -36,9 +31,6 @@ public class MusicPlayerFragment extends Fragment implements View.OnClickListene
     private Button playPauseButton;
     private Button prevButton;
     private Button nextButton;
-    private Button searchButton;
-    private Button playSearchButton;
-    private EditText searchBarEditText;
     private ImageView albumArtView;
 
     /**
@@ -68,7 +60,6 @@ public class MusicPlayerFragment extends Fragment implements View.OnClickListene
         View layout = inflater.inflate(R.layout.fragment_music_player, container, false);
 
         //Views
-        searchBarEditText = (EditText) layout.findViewById(R.id.search_bar_view);
         albumArtView = (ImageView) layout.findViewById(R.id.album_art_view);
 
         //Buttons
@@ -79,10 +70,6 @@ public class MusicPlayerFragment extends Fragment implements View.OnClickListene
         nextButton = (Button) layout.findViewById(R.id.next_button);
         nextButton.setOnClickListener(this);
 
-        searchButton = (Button) layout.findViewById(R.id.search_button);
-        searchButton.setOnClickListener(this);
-        playSearchButton = (Button) layout.findViewById(R.id.play_search_button);
-        playSearchButton.setOnClickListener(this);
         return layout;
     }
 
@@ -139,21 +126,6 @@ public class MusicPlayerFragment extends Fragment implements View.OnClickListene
         else if (v.equals(nextButton)) {
 
             audioControlListener.onNextButtonPressed();
-        }
-        else if (v.equals(searchButton)) {
-
-            SearchResults searchResults = searchListener.onSearchPressed(searchBarEditText.getText().toString());
-            Log.i(TAG, "Search Results:\n" + searchResults.toString());
-            if (!searchResults.isEmpty()) {
-                searchBarEditText.setText(searchResults.toString());
-                currentSong = searchResults.getTopResult();
-            }
-        }
-        else if (v.equals(playSearchButton)) {
-
-            // TODO: Remove this ugliness too!
-            if (currentSong != null)
-                searchListener.onSearchPlayPressed(currentSong);
         }
     }
 }
