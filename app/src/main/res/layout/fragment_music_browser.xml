@@ -1,0 +1,47 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.musicminer.musicminer.MusicBrowserFragment"
+    android:background="@color/yellow">
+
+    <RelativeLayout
+        android:id="@+id/music_browser_search_view"
+        android:layout_height="200dp"
+        android:layout_width="match_parent"
+        android:background="@color/red">
+
+        <EditText
+            android:id="@+id/music_browser_search_bar_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/green"
+            android:layout_alignParentBottom="true"/>
+
+        <ImageView
+            android:id="@+id/music_browser_album_art"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/music_browser_search_bar_edit_text"
+            android:background="@color/blue"/>
+
+        <Button
+            android:id="@+id/music_browser_search_button"
+            android:text="Search"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@color/red"
+            android:layout_below="@id/music_browser_album_art"
+            android:layout_alignParentRight="true"/>
+
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/music_browser_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/music_browser_search_view"
+        android:layout_alignParentBottom="true"
+        android:background="@color/pink"/>
+
+</RelativeLayout>

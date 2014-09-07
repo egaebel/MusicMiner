@@ -1,0 +1,139 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/music_player_main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.musicminer.musicminer.MusicPlayerFragment"
+    android:background="@color/blue">
+
+    <RelativeLayout
+        android:id="@+id/audio_control_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="150dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/pink">
+
+        <Button
+            android:id="@+id/prev_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Prev"
+            android:layout_alignTop="@+id/next_button"
+            android:layout_toLeftOf="@+id/play_pause_button" />
+
+        <Button
+            android:id="@+id/play_pause_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Play/Pause"
+            android:layout_alignTop="@+id/prev_button"
+            android:layout_centerHorizontal="true" />
+
+        <Button
+            android:id="@+id/next_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Next"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/play_pause_button" />
+
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/search_bar_view"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:background="@color/red"/>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:id="@+id/play_search_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Play New Song"
+        android:layout_alignTop="@id/search_bar_view"
+        android:layout_alignBottom="@id/search_bar_view"
+        android:layout_alignParentRight="true"
+        android:background="@color/green"/>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:id="@+id/search_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Search"
+        android:background="@color/pink"
+        android:layout_above="@+id/playlist_selection_spinner"
+        android:layout_toLeftOf="@+id/play_search_button"/>
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/playlist_selection_spinner"
+        android:layout_alignTop="@+id/album_art_view"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/thumbs_up_down_layout"
+        android:background="@color/black" />
+
+    <ImageView
+        android:id="@+id/album_art_view"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/search_bar_view"
+        android:layout_above="@id/audio_control_layout"
+        android:background="@color/green"
+        android:contentDescription="@string/album_art_image_view" />
+
+    <RelativeLayout
+        android:id="@+id/thumbs_up_down_layout"
+
+        android:layout_width="1dp"
+        android:layout_height="fill_parent"
+
+        android:layout_alignParentRight="true"
+
+        android:layout_below="@id/search_bar_view"
+        android:layout_toRightOf="@id/album_art_view"
+        android:layout_above="@id/audio_control_layout"
+
+        android:background="@color/black">
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Thumbs Up"
+            android:id="@+id/thumbs_up_button"
+            android:layout_marginTop="40dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"/>
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Thumbs Down"
+            android:id="@+id/thumbs_down_button"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"/>
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delete"
+            android:id="@+id/delete_button"
+            android:layout_marginBottom="42dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@color/black">
+
+    <TextView
+        android:id="@+id/list_view_child_text_field"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="@color/black"/>
+
+    <Button
+        android:id="@+id/list_view_child_play_button"
+        android:onClick="onMusicBrowserChildViewPlayClicked"
+        android:text="PLAY"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:background="@color/blue"/>
+
+</RelativeLayout>
