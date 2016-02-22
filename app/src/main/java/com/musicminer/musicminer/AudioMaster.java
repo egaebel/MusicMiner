@@ -93,7 +93,7 @@ public class AudioMaster {
         }
         else {
 
-            Log.i(TAG, "Well fuck....my external cursor is useless...");
+            Log.i(TAG, "Well....my external cursor is useless...");
         }
 
         Cursor internalCursor = context.getContentResolver()
@@ -134,7 +134,7 @@ public class AudioMaster {
         }
         else {
 
-            Log.i(TAG, "Well fuck....my internal cursor is useless...");
+            Log.i(TAG, "Well....my internal cursor is useless...");
         }
 
         return songs;
